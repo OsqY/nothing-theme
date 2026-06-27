@@ -185,21 +185,30 @@ sparse, high-info-density screens rather than a rainbow palette.
 
 ---
 
-## 5. MVP Theme Family — Proposed Inventory
+## 5. MVP Theme Family — Locked Inventory
 
 Family name: **`Nothing`** (single family file `themes/nothing.json` holding all
-variants). Each is mapped to a flagship product:
+variants). All **5** flagship themes ship, each mapped to an iconic product, in
+an **opaque** (default, safe everywhere) **and a `blurred`** variant for
+Windows/macOS users who want the acrylic/blur pass-through. The **primary
+highlighted theme is `Nothing Glyph Dark`** (Phone (1) glyph).
 
-| # | Theme name (`name`) | appearance | Inspired by | Accent |
-|---|----------------------|------------|-------------|--------|
-| 1 | `Nothing Glyph Dark` | dark | Phone (1) transparent + glyph LEDs | red |
-| 2 | `Nothing White` | light | Headphone (1) white | red |
-| 3 | `Nothing Milk` | light | Phone (2a) Milk / warm off-white | red |
-| 4 | `CMF Orange Dark` | dark | CMF Phone (1) Orange | orange |
-| 5 | `CMF Orange Light` | light | CMF Phone (1) Orange (light side) | orange |
+| # | Theme name | appearance | Inspired by | Accent | bg.appearance |
+|---|------------|------------|-------------|--------|---------------|
+| 1 | `Nothing Glyph Dark` | dark | Phone (1) transparent + glyph LEDs | red `#E10F1C` | opaque |
+| 1b | `Nothing Glyph Dark (Blurred)` | dark | as above | red | blurred |
+| 2 | `Nothing White` | light | Headphone (1) white | red | opaque |
+| 2b | `Nothing White (Blurred)` | light | as above | red | blurred |
+| 3 | `Nothing Milk` | light | Phone (2a) Milk / warm off-white | red | opaque |
+| 3b | `Nothing Milk (Blurred)` | light | as above | red | blurred |
+| 4 | `CMF Orange Dark` | dark | CMF Phone (1) Orange | orange `#FF6A00` | opaque |
+| 4b | `CMF Orange Dark (Blurred)` | dark | as above | orange | blurred |
+| 5 | `CMF Orange Light` | light | CMF Phone (1) Orange (light side) | orange | opaque |
+| 5b | `CMF Orange Light (Blurred)` | light | as above | orange | blurred |
 
-> 3–5 themes is a healthy MVP. Open Question Q4 asks whether you want all of
-> these or a tighter set.
+> 10 theme entries in one family. Blurred variants are identical except
+> `background.appearance: "blurred"` and slightly translucent backgrounds so
+> the blur shows; on Linux/Wayland they gracefully degrade to opaque.
 
 ### Shared family conventions
 - Monochrome base (black / white / milk), one signal accent per sub-brand.
@@ -248,7 +257,24 @@ add submodule + `extensions.toml` entry, open PR with screenshots.
 
 ---
 
-## 8. Open Questions (please answer before M1)
+## 8. Decisions (locked)
+
+| Q | Decision |
+|---|----------|
+| Q1 Identity | `id = "nothing-theme"`, family `name = "Nothing"`, repo `nothing-theme` |
+| Q2 Author | `osqy <oscarjosehpc@gmail.com>` |
+| Q3 License | MIT |
+| Q4 MVP themes | All 5 flagship themes |
+| Q5 Accent red | `#E10F1C` (no reference available; used as proposed) |
+| Q6 Primary | `Nothing Glyph Dark` highlighted as default in README/screenshots |
+| Q7 Transparency | Opaque default (all themes) **+ blurred variants for Windows** |
+| Q8 Fonts | README includes an Inter (UI) + Lettera Mono (editor) `settings.json` snippet |
+| Q9 Publish | Yes — publish to the Zed extension registry (public GitHub repo + PR to `zed-industries/extensions`) |
+| Q10 Sources | Yes — `docs/sources.md` crediting Nothing archive, Zed docs, palette references |
+
+---
+
+## 9. Open Questions (archive — resolved, see §8)
 
 **Q1. Extension identity.** Proposed `id = "nothing-theme"`, family `name =
 "Nothing"`, repo `nothing-theme`. OK, or do you want a different name (e.g.
