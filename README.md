@@ -15,7 +15,7 @@ blur pass-through on Windows & macOS; degrades gracefully to opaque on Linux).
 
 | Theme | Appearance | Inspired by | Accent |
 |-------|------------|-------------|--------|
-| **Nothing Glyph Dark** ⭐ | dark | Phone (1) transparent + glyph LEDs | red |
+| **Nothing Glyph Dark** *(default)* | dark | Phone (1) transparent + glyph LEDs | red |
 | Nothing Glyph Dark (Blurred) | dark | as above | red |
 | Nothing White | light | Headphone (1) white | red |
 | Nothing White (Blurred) | light | as above | red |
@@ -26,7 +26,7 @@ blur pass-through on Windows & macOS; degrades gracefully to opaque on Linux).
 | CMF Orange Light | light | CMF Phone (1) Orange (light) | orange |
 | CMF Orange Light (Blurred) | light | as above | orange |
 
-⭐ `Nothing Glyph Dark` is the highlighted default.
+`Nothing Glyph Dark` is the highlighted default.
 
 Full design rationale, palette tokens, and roadmap: [`SPEC.md`](./SPEC.md).
 
