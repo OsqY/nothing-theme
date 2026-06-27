@@ -1,0 +1,7 @@
+id = "nothing-theme"
+name = "Nothing"
+version = "0.1.0"
+schema_version = 1
+authors = ["osqy <oscarjosehpc@gmail.com>"]
+description = "Industrial monochrome, dot-matrix-inspired themes from Nothing's design language. Fan-made, not affiliated with Nothing Technology Limited."
+repository = "https://github.com/osqy/nothing-theme"
