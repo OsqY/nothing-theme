@@ -6,3 +6,7 @@ thumbs.db
 
 # Zed local data
 zed.log
+
+# Screenshots (user-local, not for the repo)
+Screenshot*.png
+screenshots/
